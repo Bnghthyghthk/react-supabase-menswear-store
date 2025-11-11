@@ -1,8 +1,160 @@
-[![CodeGuide](/codeguide-backdrop.svg)](https://codeguide.dev)
+# Men's Wear E-Commerce Store
 
-# CodeGuide Vite + Supabase Starter
+A full-stack e-commerce application for men's clothing built with React, Node.js, and MongoDB.
 
-A modern web application starter template built with Vite and React, featuring a beautiful UI and Supabase integration.
+## 🚀 Features
+
+### Customer Experience
+- **Product Catalog**: Browse and search through a comprehensive collection of men's fashion
+- **Product Details**: View detailed product information with image galleries
+- **Shopping Cart**: Add, remove, and update quantities of items
+- **Multi-step Checkout**: Secure and streamlined checkout process
+- **Order Management**: Track orders and view order history
+- **User Authentication**: Register, login, and manage account
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+
+### Admin Dashboard
+- **Dashboard Overview**: Real-time analytics and sales metrics
+- **Product Management**: Full CRUD operations for products
+- **Order Management**: View, update, and manage customer orders
+- **User Management**: Manage customer accounts
+- **Sales Analytics**: Comprehensive charts and reports
+- **Inventory Management**: Track stock levels and low-stock alerts
+
+## 🛠 Tech Stack
+
+### Frontend
+- **React 18** with TypeScript
+- **Vite** for fast development
+- **React Router** for navigation
+- **TanStack Query** for server state management
+- **Zustand** for client-side state management
+- **Tailwind CSS** for styling
+- **React Hook Form** with Zod for form validation
+- **Recharts** for data visualization
+- **Lucide React** for icons
+
+### Backend
+- **Node.js** with Express
+- **TypeScript**
+- **MongoDB** with Mongoose ODM
+- **JWT** for authentication
+- **bcryptjs** for password hashing
+- **Express Validator** for input validation
+- **Helmet** for security headers
+- **Rate Limiting** for API protection
+
+## 📁 Project Structure
+
+```
+menswear-store/
+├── backend/                    # Node.js API server
+│   ├── src/
+│   │   ├── config/            # Database and server configuration
+│   │   ├── controllers/       # Request handlers
+│   │   ├── middleware/        # Custom middleware
+│   │   ├── models/            # MongoDB schemas
+│   │   ├── routes/            # API routes
+│   │   ├── types/             # TypeScript definitions
+│   │   ├── utils/             # Utility functions
+│   │   └── server.ts          # Main server file
+│   ├── package.json
+│   └── tsconfig.json
+├── src/                       # React frontend
+│   ├── components/            # Reusable UI components
+│   ├── contexts/              # React contexts
+│   ├── pages/                 # Page components
+│   │   ├── admin/             # Admin-specific pages
+│   ├── services/              # API service layer
+│   ├── store/                 # State management
+│   ├── types/                 # TypeScript types
+│   └── App.tsx                # Main app component
+├── public/                    # Static assets
+├── package.json
+└── README.md
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v16 or higher)
+- MongoDB (local or MongoDB Atlas)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd menswear-store
+   ```
+
+2. **Install backend dependencies**
+   ```bash
+   cd backend
+   npm install
+   ```
+
+3. **Install frontend dependencies**
+   ```bash
+   cd ..
+   npm install
+   ```
+
+4. **Environment Setup**
+
+   Backend (backend/.env):
+   ```env
+   PORT=5000
+   NODE_ENV=development
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your-super-secret-jwt-key
+   JWT_EXPIRE=7d
+   FRONTEND_URL=http://localhost:5173
+   ```
+
+5. **Seed the database (optional)**
+   ```bash
+   cd backend
+   npm run seed
+   ```
+   This will create sample products and an admin user.
+
+### Running the Application
+
+1. **Start the backend server**
+   ```bash
+   cd backend
+   npm run dev
+   ```
+
+2. **Start the frontend application**
+   ```bash
+   cd ..
+   npm run dev
+   ```
+
+3. **Access the application**
+   - Frontend: http://localhost:5173
+   - Backend API: http://localhost:5000
+   - Admin Dashboard: http://localhost:5173/admin
+
+## 👥 Default Admin User
+
+When you run the seed script, an admin user is created:
+- **Email**: admin@menswear.com
+- **Password**: admin123
+
+## 📊 Admin Dashboard Features
+
+The admin dashboard includes:
+- Revenue tracking and sales metrics
+- Order statistics and management
+- Product performance analytics
+- Customer management
+- Interactive charts and graphs
+- Inventory management with low-stock alerts
+- Real-time order status updates
 
 ## Tech Stack
 
